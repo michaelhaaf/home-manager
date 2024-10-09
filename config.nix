@@ -19,6 +19,9 @@
 
     pkgs.ruby
 
+    pkgs.cargo
+    pkgs.rustc
+
     pkgs.swi-prolog
     pkgs.gprolog
     pkgs.ciao
