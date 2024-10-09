@@ -8,7 +8,9 @@
     pkgs.sl
 
     pkgs.neovim
+
     pkgs.gcc
+    pkgs.zig
 
     pkgs.pandoc
     pkgs.R
@@ -16,5 +18,12 @@
     pkgs.perl
 
     pkgs.ruby
+
+    pkgs.swi-prolog
+    pkgs.gprolog
+    pkgs.ciao
+
+    pkgs.ghc
+    pkgs.cabal-install
   ];
 }
