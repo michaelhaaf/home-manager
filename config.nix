@@ -6,6 +6,15 @@
 
   home.packages = [
     pkgs.sl
+
     pkgs.neovim
+    pkgs.gcc
+
+    pkgs.pandoc
+    pkgs.R
+    pkgs.quarto
+    pkgs.perl
+
+    pkgs.ruby
   ];
 }
