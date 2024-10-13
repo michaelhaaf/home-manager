@@ -6,6 +6,7 @@
 
   home.packages = [
     pkgs.sl
+    pkgs.stow
 
     pkgs.neovim
 
