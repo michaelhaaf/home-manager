@@ -7,6 +7,7 @@
   home.packages = [
     pkgs.sl
     pkgs.stow
+    pkgs.gnumake
 
     pkgs.neovim
 
