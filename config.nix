@@ -6,6 +6,8 @@
 
   home.packages = [
     pkgs.sl
+    pkgs.cava
+
     pkgs.stow
     pkgs.gnumake
 
@@ -13,6 +15,7 @@
 
     pkgs.gcc
     pkgs.zig
+    pkgs.go
 
     pkgs.pandoc
     pkgs.R
@@ -30,5 +33,13 @@
 
     pkgs.ghc
     pkgs.cabal-install
+
+    pkgs.nodejs
+    pkgs.gjs
+    pkgs.bun
+    pkgs.typescript
+    pkgs.eslint
+
+    pkgs.jq
   ];
 }
