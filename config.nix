@@ -7,9 +7,11 @@
   home.packages = [
     pkgs.sl
     pkgs.cava
+    pkgs.zathura
 
     pkgs.stow
     pkgs.gnumake
+    pkgs.parallel
 
     pkgs.neovim
 
@@ -41,5 +43,6 @@
     pkgs.eslint
 
     pkgs.jq
+    pkgs.yq
   ];
 }
