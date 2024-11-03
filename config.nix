@@ -8,6 +8,7 @@
     pkgs.sl
     pkgs.cava
     pkgs.zathura
+    pkgs.pdftk
 
     pkgs.stow
     pkgs.gnumake
