@@ -9,6 +9,7 @@
     pkgs.cava
     pkgs.zathura
     pkgs.pdftk
+    pkgs.ghostscript
 
     pkgs.stow
     pkgs.gnumake
