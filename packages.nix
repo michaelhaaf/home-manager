@@ -19,6 +19,7 @@
     zellij
     zip
     ripgrep
+    btop
     htop
     jq
     yq
@@ -35,6 +36,18 @@
     chafa
     bc
     direnv
+    eza
+    rsync
+    rclone
+    gnused
+    zoxide
+    gzip
+    git
+    lazygit
+    gettext
+    gawk
+    atuin
+    nmap
 
     # SDKs
     gcc
@@ -49,6 +62,7 @@
     ruby
     python3
     R
+    tree-sitter
 
     # Web dev tools
     quarto
@@ -59,7 +73,6 @@
 
     # Encryption and security tools
     age
-    age-plugin-yubikey
     gnupg
     pass
     fuzzel
@@ -80,6 +93,7 @@
     ffmpeg
 
     # PDF
+    pandoc
     zathura
     pdftk
     ghostscript
