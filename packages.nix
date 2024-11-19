@@ -48,6 +48,7 @@
     gawk
     atuin
     nmap
+    wev
 
     # SDKs
     gcc
