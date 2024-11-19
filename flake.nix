@@ -26,36 +26,26 @@
 
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  } @inputs:
-  let
-    inherit (self) outputs;
-    systems = [
-      "x86_64-linux"
-      "aarch64-linux"
-      "x86_64-darwin"
-      "aarch64-darwin"
-    ];
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-  in {
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
-    overlays = import ./overlays { inherit inputs; };
-    homeManagerModules = import ./modules/home-manager;
+ outputs = { nixpkgs, home-manager, nix-index-database, ... }:
+    let
+      withArch = arch:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${arch};
+          modules = [ ./home.nix nix-index-database.hmModules.nix-index ];
+        };
+    in {
+      defaultPackage = {
+        x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+        x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
+        aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
+        aarch64-linux = home-manager.defaultPackage.aarch64-linux;
+      };
 
-    homeConfigurations.michael = {
-      inputs.home-manager.lib.homeManagerConfiguration = {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = { inherit inputs outputs; };
-        modules = [
-          ./home-manager/home.nix
-          inputs.nix-index-database.hmModules.nix-index
-        ];
+      homeConfigurations = {
+        "michael@home" = withArch "x86_64-linux";
+        "michael@laptop" = withArch "x86_64-linux";
+        "michael@wsl" = withArch "x86_64-linux";
+        "michael@osx" = withArch "aarch64-darwin";
       };
     };
-  };
 }
