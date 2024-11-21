@@ -49,6 +49,9 @@
     atuin
     nmap
     wev
+    starship
+    dwt1-shell-color-scripts
+    delta
 
     # SDKs
     gcc

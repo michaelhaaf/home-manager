@@ -15,7 +15,7 @@
   imports = [
     ./packages.nix
     ./pkgs/neovim.nix
-    # ./pkgs/chezmoi.nix
+    ./pkgs/chezmoi.nix
   ];
 
 }
