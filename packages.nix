@@ -52,6 +52,8 @@
     starship
     dwt1-shell-color-scripts
     delta
+    wkhtmltopdf
+    sops
 
     # SDKs
     gcc
