@@ -97,11 +97,14 @@
     # Media management
     imagemagick
     ffmpeg
+    luajit
+    prettierd
 
     # PDF
     pandoc
     zathura
     pdftk
     ghostscript
+    libreoffice-fresh
   ];
 }
