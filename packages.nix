@@ -80,7 +80,7 @@
     # Encryption and security tools
     age
     gnupg
-    pass
+    (pass.withExtensions (ext: [ ext.pass-otp ]))
     fuzzel
     tessen
 
