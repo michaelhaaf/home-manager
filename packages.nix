@@ -1,6 +1,13 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    # Fix locales
+    glibcLocales
+
+    # terminal recording
+    asciinema
+    asciinema-agg
+
     # General
     aspell
     aspellDicts.en
