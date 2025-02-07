@@ -11,13 +11,11 @@
     # General
     aspell
     aspellDicts.en
-    bash-completion
     bat
     btop
     coreutils
     difftastic
     du-dust
-    fzf
     neofetch
     openssh
     pandoc
@@ -30,7 +28,6 @@
     htop
     jq
     yq
-    nix-bash-completions
     tree
     watch
     wget
