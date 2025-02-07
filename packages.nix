@@ -58,6 +58,7 @@
     delta
     wkhtmltopdf
     sops
+    mpv
 
     # SDKs
     gcc
