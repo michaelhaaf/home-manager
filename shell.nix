@@ -1,6 +1,11 @@
 { config, pkgs, ...}:
 {
 
+  # .profile is used by the host system, keep it
+  home.file = {
+    ".profile".enable = false;
+  };
+
   programs = {
     bash = {
       enable = true;
