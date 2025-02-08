@@ -15,7 +15,7 @@
   imports = [
     ./packages.nix
     ./pkgs/neovim.nix
-    ./shell.nix
+    ./shell/bash.nix
   ];
 
 }

@@ -20,6 +20,7 @@
         l1="eza -1";
         la="eza -a";
       };
+      bashrcExtra = builtins.readFile ./bashrcExtra;
     };
 
     fzf = {
