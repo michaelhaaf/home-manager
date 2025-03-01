@@ -94,7 +94,7 @@
     act
     codeberg-cli
     azure-cli
-    
+
     # Dotfile management
     stow
     chezmoi
@@ -104,6 +104,7 @@
     ffmpeg
     luajit
     prettierd
+    shfmt
 
     # PDF
     pandoc
