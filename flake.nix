@@ -34,13 +34,6 @@
           modules = [ ./home.nix nix-index-database.hmModules.nix-index ];
         };
     in {
-      defaultPackage = {
-        x86_64-linux = home-manager.defaultPackage.x86_64-linux;
-        x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
-        aarch64-darwin = home-manager.defaultPackage.aarch64-darwin;
-        aarch64-linux = home-manager.defaultPackage.aarch64-linux;
-      };
-
       homeConfigurations = {
         "michael@home" = withArch "x86_64-linux";
         "michael@laptop" = withArch "x86_64-linux";
