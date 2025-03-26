@@ -43,6 +43,7 @@
     eza
     rsync
     rclone
+    inotify-tools
     gnused
     zoxide
     gzip
