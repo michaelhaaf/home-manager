@@ -113,5 +113,6 @@
     pdftk
     ghostscript
     libreoffice-fresh
+    ocrmypdf
   ];
 }
