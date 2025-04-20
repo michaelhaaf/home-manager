@@ -94,7 +94,6 @@
     gh
     act
     codeberg-cli
-    azure-cli
 
     # Dotfile management
     stow
