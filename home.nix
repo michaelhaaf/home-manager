@@ -16,7 +16,6 @@
     ./packages.nix
     ./pkgs/neovim.nix
     ./shell/bash.nix
-    ./pkgs/azure-cli.nix
   ];
 
 }

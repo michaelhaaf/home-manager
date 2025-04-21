@@ -3,6 +3,7 @@
 # And: https://github.com/NixOS/nixpkgs/issues/310525
 # And: https://github.com/Azure/azure-iot-sdk-python/issues/1196
 # Approach adapted from: https://stackoverflow.com/a/79021669
+# Note: ended up using a python venv for azure-cli instead, but keeping this here as an example that "works"
 {
   pkgs, ...
 }: let
@@ -14,6 +15,9 @@
     };
 in {
   home.packages = with pkgs_azurecli; [
+    (python312Packages.uamqp.overrideAttrs (old: {
+      NIX_CFLAGS_COMPILE="-Wno-error=incompatible-pointer-types";
+    }))
     (azure-cli.withExtensions [azure-cli-extensions.azure-iot])
   ];
 }
