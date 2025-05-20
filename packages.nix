@@ -47,7 +47,7 @@
     gnused
     zoxide
     gzip
-    git
+    gitFull
     lazygit
     gettext
     gawk
@@ -74,6 +74,7 @@
     ruby
     R
     tree-sitter
+    dotnet-sdk
 
     # Web dev tools
     quarto
