@@ -6,7 +6,10 @@
     ".profile".enable = false;
   };
 
+  home.file."${config.xdg.configHome}/yazi/yazi.toml".source = ./yazi.toml;
+
   programs = {
+
     bash = {
       enable = true;
       enableCompletion = true;
