@@ -24,14 +24,19 @@
       # no input overrides to use binary cache
     };
 
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
- outputs = { nixpkgs, home-manager, nix-index-database, ... }:
+ outputs = { nixpkgs, home-manager, nix-index-database, ... } @ inputs:
     let
       withArch = arch:
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${arch};
-          modules = [ ./home.nix nix-index-database.hmModules.nix-index ];
+          modules = [ inputs.sops-nix.homeManagerModules.sops ./home.nix nix-index-database.homeModules.nix-index ];
         };
     in {
       homeConfigurations = {
