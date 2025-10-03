@@ -11,77 +11,51 @@
     # General
     aspell
     aspellDicts.en
+    atuin
     bat
+    bc
     btop
+    chafa
     coreutils
+    curl
+    delta
     difftastic
+    direnv
     du-dust
+    dwt1-shell-color-scripts
+    eza
+    fd
+    gawk
+    gettext
+    gitFull
+    gnumake
+    gnused
+    gzip
+    htop
+    iftop
+    inotify-tools
+    jq
+    lazygit
+    mpv
     neofetch
+    nmap
     openssh
-    pandoc
+    parallel
+    rclone
+    ripgrep
+    rsync
+    sops
     sqlite
+    starship
+    tree
+    unzip
+    watch
+    wev
     wget
+    yq
     zellij
     zip
-    ripgrep
-    btop
-    htop
-    jq
-    yq
-    tree
-    watch
-    wget
-    curl
-    fd
-    iftop
-    unzip
-    gnumake
-    parallel
-    chafa
-    bc
-    direnv
-    eza
-    rsync
-    rclone
-    inotify-tools
-    gnused
     zoxide
-    gzip
-    gitFull
-    lazygit
-    gettext
-    gawk
-    atuin
-    nmap
-    wev
-    starship
-    dwt1-shell-color-scripts
-    delta
-    wkhtmltopdf
-    sops
-    mpv
-
-    # SDKs
-    gcc
-    zig
-    go
-    cargo
-    rustc
-    swi-prolog
-    ghc
-    cabal-install
-    perl
-    ruby
-    R
-    tree-sitter
-    dotnet-sdk
-
-    # Web dev tools
-    quarto
-    nodejs
-    gjs
-    bun
-    typescript
 
     # Encryption and security tools
     age
@@ -103,9 +77,6 @@
     # Media management
     imagemagick
     ffmpeg
-    luajit
-    prettierd
-    shfmt
 
     # PDF
     pandoc
