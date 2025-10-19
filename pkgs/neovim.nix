@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }: {
   programs.neovim = {
@@ -7,5 +8,20 @@
     vimAlias = true;
     defaultEditor = true;
     extraLuaPackages = ps: [ps.magick];
+    plugins = [
+      (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
+        bash
+        css
+        html
+        lua
+        javascript
+        latex
+        markdown
+        nix
+        rust
+        typescript
+        vim
+      ]))
+    ];
   };
 }
