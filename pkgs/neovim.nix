@@ -12,20 +12,21 @@
     withPython3 = true;
     extraLuaPackages = ps: [ps.magick];
     plugins = [
-      (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
-        bash
-        css
-        html
-        lua
-        javascript
-        latex
-        markdown
-        nix
-        python
-        rust
-        typescript
-        vim
-      ]))
+      pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+      # (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
+      #   bash
+      #   css
+      #   html
+      #   lua
+      #   javascript
+      #   latex
+      #   markdown
+      #   nix
+      #   python
+      #   rust
+      #   typescript
+      #   vim
+      # ]))
     ];
   };
 }
