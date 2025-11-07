@@ -36,6 +36,7 @@
     inotify-tools
     jq
     lazygit
+    mermaid-cli
     mpv
     neofetch
     nmap
@@ -52,6 +53,7 @@
     watch
     wev
     wget
+    wordnet
     yq
     zellij
     zip
