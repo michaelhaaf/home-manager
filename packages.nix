@@ -21,7 +21,7 @@
     delta
     difftastic
     direnv
-    du-dust
+    dust
     dwt1-shell-color-scripts
     eza
     fd
@@ -83,7 +83,6 @@
     zathura
     pdftk
     ghostscript
-    libreoffice-fresh
     ocrmypdf
   ];
 }

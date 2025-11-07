@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
+    nix-ld = {
+      url = "github:Mic92/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,12 +36,18 @@
 
   };
 
- outputs = { nixpkgs, home-manager, nix-index-database, ... } @ inputs:
+ outputs = { nixpkgs, home-manager, ... } @ inputs:
     let
       withArch = arch:
         home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${arch};
-          modules = [ inputs.sops-nix.homeManagerModules.sops ./home.nix nix-index-database.homeModules.nix-index ];
+          modules = [
+            inputs.sops-nix.homeManagerModules.sops
+            inputs.nix-index-database.homeModules.nix-index
+            ./home.nix
+            # inputs.nix-ld.nixosModules.nix-ld
+            # { programs.nix-ld.dev.enable = true; }
+          ];
         };
     in {
       homeConfigurations = {

@@ -11,6 +11,7 @@
     withNodeJs = true;
     withPython3 = true;
     extraLuaPackages = ps: [ps.magick];
+    extraPackages = [ pkgs.clang pkgs.statix pkgs.cargo ];
     plugins = [
       pkgs.vimPlugins.nvim-treesitter.withAllGrammars
       # (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
