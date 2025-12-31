@@ -43,11 +43,13 @@
     openssh
     parallel
     rclone
+    rename
     ripgrep
     rsync
     sops
     sqlite
     starship
+    strace
     tree
     unzip
     watch
