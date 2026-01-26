@@ -61,6 +61,10 @@
     zip
     zoxide
 
+    # nix utilites
+    nh
+    nix-output-monitor
+
     # Encryption and security tools
     age
     gnupg
