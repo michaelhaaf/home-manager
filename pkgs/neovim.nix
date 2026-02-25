@@ -62,7 +62,6 @@ in {
     withNodeJs = true;
     withPython3 = true;
     withRuby = true;
-    extraLuaPackages = ls: with ls; [ luarocks ];
     extraPackages = with pkgs; [
       doq
       tree-sitter
@@ -77,6 +76,8 @@ in {
       pkg-config
       statix
       yarn
+      lua51Packages.luarocks
+      lua51Packages.lua
     ];
     plugins = [
       pkgs.vimPlugins.nvim-treesitter.withAllGrammars
